@@ -45,6 +45,7 @@ if __name__ == "__main__":
         import subprocess
 
         code = subprocess.call([str(maturin)] + sys.argv[1:])
+        print(f"exit code: {code}")
         sys.exit(code)
     else:
         os.execv(maturin, [str(maturin)] + sys.argv[1:])
